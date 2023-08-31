@@ -1,0 +1,13 @@
+<form class="w-full flex flex-col space-y-4" action="" (ngSubmit)="emitCharacater()">
+    <h2 class="w-full text-center">Agregar Personaje</h2>
+    <div class="grid place-items-center">
+        <input [(ngModel)]="character.name" name="name" class="w-3/4" type="text" placeholder="Nombre">
+
+        <input [(ngModel)]="character.power" name="power" class="w-3/4" type="number" placeholder="Poder">
+        <div class="w-full flex justify-center">
+            <button class="w-1/4">Agregar</button>
+            <button class="w-1/4" (click)="resetForm()">Reset</button>
+        </div>
+    </div>
+    <!-- <pre>{{character | json}}</pre> -->
+</form>

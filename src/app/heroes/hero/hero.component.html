@@ -1,0 +1,27 @@
+<h1 >Spiderman Hero</h1>
+
+<dl class="flex flex-col space-y-4 my-5">
+    <td>Nombre:</td>
+    <dd>{{name}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{age}}</dd>
+
+    <td>Metodo:</td>
+    <dd>algun metodo</dd>
+
+    <td>Capitalizado:</td>
+    <dd>{{capitalizedName}}</dd>
+
+    
+    <td>Descripcion:</td>
+    <dd>{{getHeroDescription()}}</dd>
+</dl>
+<button 
+*ngIf="name !== 'The Hulk'"
+(click)="changeHero()">Cambiar Nombre</button>
+<button 
+*ngIf="age !== 25"
+(click)="changeAge()">Cambiar Edad</button>
+<button 
+(click)="reset()">Reset</button>

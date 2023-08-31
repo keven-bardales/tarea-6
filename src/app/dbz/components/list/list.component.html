@@ -1,0 +1,20 @@
+<h4>Lista</h4>
+<ul class="flex flex-col space-y-5">
+    <li class="flex flex-col bg-gradient-to-t"[ngClass]="{'from-green-400 to-green-800': isFirst, 
+    'from-gray-400 to-gray-800': isLast
+}" *ngFor="let character of characterList; 
+    let i = index; 
+    let isFirst = first; 
+    let isLast = last; 
+    let isEven = even; 
+    let isOdd = odd">
+        <div><span>{{character.id}}</span> -
+        <span>{{character.name}}</span></div>
+         <strong>Power: {{character.power}}</strong>
+        <span>Es el primero: {{isFirst}}</span>
+         <span>Es el ultimo: {{isLast}}</span>
+         <span>es even: {{isEven}}</span>
+         <span>es odd: {{isOdd}}</span>
+         <button (click)="deleteCharacter(character.id)" class="bg-gradient-to-t from-red-500 to-red-800">Eliminar</button>
+    </li>
+</ul>
